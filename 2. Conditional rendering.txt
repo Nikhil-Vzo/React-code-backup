@@ -1,0 +1,32 @@
+2. Conditional rendering 
+
+component[Conditional_Rendering.jsx]
+
+===============================================================
+function Conditional_Rendering({ isLogged, user_Name }) {
+  if (isLogged === true) {
+    return <h1>Welcome {user_Name}</h1>;
+  } else {
+    return <h1>Please login</h1>;
+  }
+}
+
+export default Conditional_Rendering;
+===============================================================
+
+
+
+Values[User_tracking.jsx]
+===============================================================================================
+import Conditional_Rendering from "../components/Conditional-Rendering";
+
+function User_tracking() {
+  return (
+    <>
+      <Conditional_Rendering isLogged={false} user_Name="Nikhil Yadav" />
+    </>
+  );
+}
+
+export default User_tracking;
+=================================================================================================
