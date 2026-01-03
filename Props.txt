@@ -1,0 +1,53 @@
+//Props
+
+====>Movie_Card.jsx
+
+--------------------------------------------------
+function Moviecard(props)
+{
+return( 
+    <div className="movie-card">
+    <h1>Name:{props.name}</h1>
+    <h1>Release_Date:{props.release_date}</h1>
+    <h1>Rating:{props.rating}</h1>
+    <h1>Duration:{props.duration}</h1>
+    </div>
+)
+---------------------------------------------------
+
+
+Page.jsx
+
+------------------------------------------------------------------------------------------------------
+function App()
+{
+    return(
+        <div className="movie-container">
+        <Moviecard name="Inception" release_date="2010" rating="8.8" duration="148 minutes"/>
+        <Moviecard name="The Dark Knight" release_date="2008" rating="9.0" duration="152 minutes"/>
+        <Moviecard name="Interstellar" release_date="2014" rating="8.6" duration="169 minutes"/>
+        <Moviecard name="Parasite" release_date="2019" rating="8.6" duration="132 minutes"/>
+        </div>
+    )
+}
+
+export default App;
+---------------------------------------------------------------------------------------------------------
+
+Main.jsx
+
+---------------------------------------------------------------------------------
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import MovieCard from './components/Movie-card'
+import App from './Pages/HOme.jsx'
+
+
+
+
+createRoot(document.getElementById('root')).render(
+  <>
+   <App />
+  </>
+)
+----------------------------------------------------------------------------------
